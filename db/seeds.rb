@@ -1155,38 +1155,32 @@ primary_user = User.create!(
     tree_count: 8
 )
 
-## big challenge for primary user
-
-WeeklyChallenge.create!(
-  status_challenge: false,
-  challenge: challengebbq,
-  user: primary_user,
-  week: Date.today.cweek,
-  year: 2019
-)
-
-## 2 small challenges for primary user
-
-WeeklyChallenge.create!(
-  status_challenge: false,
-  challenge: challengetoothbrush,
-  user: primary_user,
-  week: Date.today.cweek,
-  year: 2019
-)
-
-WeeklyChallenge.create!(
-  status_challenge: false,
-  challenge: challengestraws,
-  user: primary_user,
-  week: Date.today.cweek,
-  year: 2019
-)
-
-## fake challenges for journal
-
 big_challenges = Challenge.where(size: true)
 small_challenges = Challenge.where(size: false)
+
+WeeklyChallenge.create!(
+  status_challenge: false,
+  challenge: big_challenges.sample,
+  user: primary_user,
+  week: Date.today.cweek,
+  year: 2019
+)
+
+WeeklyChallenge.create!(
+  status_challenge: false,
+  challenge: gera,
+  user: primary_user,
+  week: Date.today.cweek,
+  year: 2019
+)
+
+WeeklyChallenge.create!(
+  status_challenge: false,
+  challenge: small_challenges.sample,
+  user: primary_user,
+  week: Date.today.cweek,
+  year: 2019
+)
 
 5.times do WeeklyChallenge.create!(
   status_challenge: true,
@@ -1205,7 +1199,6 @@ end
   year: 2019
   )
 end
-
 
 4.times do Success.create!(
   user: primary_user,
@@ -1243,9 +1236,6 @@ deal.challenge = Challenge.find(1)
 deal.partner = partner
 deal.save
 
-
-## creating fake challenges everywhere excet hygiene cat
-
 50.times do
   Challenge.create(
   name: Faker::Lorem.sentence,
@@ -1255,7 +1245,7 @@ deal.save
   map: false,
   gender_specific: 0,
   plastic: 500,
-  category: [catkit, electric, leasur, appare, work, soc].sample,
+  category: Category.all.sample,
   size: false
-  )
+    )
 end
