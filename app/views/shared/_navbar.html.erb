@@ -14,13 +14,24 @@
 <%
 =end %>
 
-  <div class="dropdown dropdown-selector">
+  <div class="dropdown dropdown-selector-desktop">
     <button class="dropdown-toggle dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <%= t("locales.#{I18n.locale}") %>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <% [:fr, :en, :nl].each do |locale| %>
       <%= link_to t("locales.#{locale}"), root_path(:locale => locale), :class => "dropdown-item"  %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="dropdown dropdown-selector-phone">
+    <button class="dropdown-toggle dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= t("locales_short.#{I18n.locale}") %>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <% [:fr, :en, :nl].each do |locale| %>
+      <%= link_to t("locales_short.#{locale}"), root_path(:locale => locale), :class => "dropdown-item"  %>
       <% end %>
     </div>
   </div>
