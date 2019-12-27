@@ -1,4 +1,9 @@
-.dropdown-selector {
+.dropdown-selector-phone {
+  position: relative;
+  display: none;
+}
+
+.dropdown-selector-desktop {
   position: relative;
   display: inline-block;
 }
@@ -28,5 +33,13 @@
     right: 0;
     z-index: 1000;
     left: auto;
+  }
+
+  .dropdown-selector-phone {
+    display: inline-block;
+  }
+
+  .dropdown-selector-desktop {
+    display: none;
   }
 }

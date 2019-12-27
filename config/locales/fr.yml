@@ -14,7 +14,7 @@ fr:
     main_title_part1: "La première app qui t'accompagne sur le"
     main_title_part2: "chemin du zéro-déchet"
     main_title_part3: "."
-    make_project_reality: "Je veux que ce projet voit le jour !"
+    make_project_reality: "Je veux que ce projet soit réalisé !"
     mission: "Mission"
     motivate_gamification: "Trouve la motivation par le jeu"
     motivate_gamification_description: "Surmonte les défis à ton propre rythme avec des niveaux de difficulté progressifs. Passe à l'action et vois tes efforts immédiatement récompensés : gagne de l'expérience, collectionne des badges et garde un œil sur la quantité de plastique que tu as économisée !"
@@ -32,3 +32,7 @@ fr:
     en: "🇬🇧 English"
     fr: "🇫🇷 Français"
     nl: "🇳🇱 Nederlands"
+  locales_short:
+    en: "🇬🇧 EN"
+    fr: "🇫🇷 FR"
+    nl: "🇳🇱 NL"
