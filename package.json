@@ -7,7 +7,7 @@
     "countjs": "^1.2.0",
     "countup.js": "^2.0.4",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "popper.js": "^1.16.0",
     "slick-carousel": "^1.8.1",
     "mapbox-gl": "^1.5.0",
